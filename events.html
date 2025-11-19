@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Coakley’s Pub — Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="events.css" />
+  <script src="events.js" defer></script>
+</head>
+<body id="top">
+  <!-- Header -->
+  <header class="header">
+    <div class="shell">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 class="title">Coakley’s Pub <span class="tag">Events</span></h1>
+      </div>
+      <nav class="tabs" aria-label="Jump to section">
+        <a class="tab" href="#upcoming">Upcoming</a>
+        <a class="tab" href="#calendar">Calendar</a>
+        <a class="tab" href="#past">Past</a>
+        <a class="tab" href="#host">Host An Event</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-wrap">
+        <h2 class="display">Good times, great company.</h2>
+        <p class="sub">Live music, trivia nights, game-day specials, and seasonal parties.</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section id="upcoming" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="underline"></div>
+      </div>
+
+      <form class="filters" onsubmit="return false">
+        <input id="q" type="search" placeholder="Search (e.g., trivia, band, football)" />
+        <select id="cat" aria-label="Category">
+          <option value="">All categories</option>
+          <option value="music">Live Music</option>
+          <option value="trivia">Trivia</option>
+          <option value="sports">Game Day</option>
+          <option value="seasonal">Seasonal</option>
+        </select>
+        <input id="month" type="month" />
+        <button id="clear" class="btn" type="button">Clear</button>
+      </form>
+
+      <!-- Event list -->
+      <div class="events card" role="list" id="events">
+        <!-- Event card -->
+        <article class="event row" role="listitem"
+                 data-title="Friday Night Live: The Harbor Band"
+                 data-cat="music" data-date="2025-04-18">
+          <img class="thumb" src="#img#" alt="The Harbor Band poster" />
+          <div class="meta">
+            <h3 class="name">Friday Night Live: The Harbor Band</h3>
+            <p class="desc">Classic rock & indie favorites. Doors 7:00 PM • Show 8:00 PM.</p>
+            <div class="badges">
+              <span class="badge">Live Music</span><span class="badge">21+</span>
+            </div>
+            <div class="meta2">
+              <span class="dt">Fri, Apr 18 • 8:00 PM</span>
+              <span class="loc">Main Stage</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" aria-label="Tickets">Tickets</a>
+              <a class="btn ghost" href="#" aria-label="Add to Calendar">Add to Calendar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event row" role="listitem"
+                 data-title="Pub Trivia — General Knowledge"
+                 data-cat="trivia" data-date="2025-04-22">
+          <img class="thumb" src="#img#" alt="Trivia night" />
+          <div class="meta">
+            <h3 class="name">Pub Trivia — General Knowledge</h3>
+            <p class="desc">Teams up to 6. Prizes for top 3. Happy hour 5–7 PM.</p>
+            <div class="badges">
+              <span class="badge">Trivia</span><span class="badge">Free</span>
+            </div>
+            <div class="meta2">
+              <span class="dt">Tue, Apr 22 • 7:00 PM</span>
+              <span class="loc">Dining Room</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" aria-label="RSVP">RSVP</a>
+              <a class="btn ghost" href="#" aria-label="Add to Calendar">Add to Calendar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event row" role="listitem"
+                 data-title="Game Day: Baltimore vs Pittsburgh"
+                 data-cat="sports" data-date="2025-04-27">
+          <img class="thumb" src="#img#" alt="Game day" />
+          <div class="meta">
+            <h3 class="name">Game Day: Baltimore vs Pittsburgh</h3>
+            <p class="desc">Sound on. Wing & pitcher specials all game.</p>
+            <div class="badges">
+              <span class="badge">Game Day</span><span class="badge">Specials</span>
+            </div>
+            <div class="meta2">
+              <span class="dt">Sun, Apr 27 • 1:00 PM</span>
+              <span class="loc">Bar & Patio</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" aria-label="Details">Details</a>
+              <a class="btn ghost" href="#" aria-label="Add to Calendar">Add to Calendar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="event row" role="listitem"
+                 data-title="Cinco de Mayo Patio Party"
+                 data-cat="seasonal" data-date="2025-05-05">
+          <img class="thumb" src="#img#" alt="Cinco de Mayo" />
+          <div class="meta">
+            <h3 class="name">Cinco de Mayo Patio Party</h3>
+            <p class="desc">Live DJ, tacos, and margarita flights. Rain or shine.</p>
+            <div class="badges">
+              <span class="badge">Seasonal</span><span class="badge">Outdoor</span>
+            </div>
+            <div class="meta2">
+              <span class="dt">Mon, May 5 • 6:00 PM</span>
+              <span class="loc">Patio</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" aria-label="Details">Details</a>
+              <a class="btn ghost" href="#" aria-label="Add to Calendar">Add to Calendar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Simple calendar embed placeholder -->
+    <section id="calendar" class="section">
+  <div class="section-head">
+    <h2 class="section-title">Calendar</h2>
+    <div class="underline"></div>
+  </div>
+
+  <!-- Responsive Google Calendar embed -->
+  <div class="calendar-embed">
+    <!-- TODO: replace CALENDAR_ID and TIME_ZONE -->
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=TIME_ZONE&mode=MONTH&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&src=CALENDAR_ID"
+      style="border:0" frameborder="0" scrolling="no"></iframe>
+  </div>
+</section>
+
+    </section>
+
+    <!-- Past events -->
+    <section id="past" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Past Highlights</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="past-grid">
+        <img src="#img#" alt="Past event 1" class="past-thumb">
+        <img src="#img#" alt="Past event 2" class="past-thumb">
+        <img src="#img#" alt="Past event 3" class="past-thumb">
+        <img src="#img#" alt="Past event 4" class="past-thumb">
+      </div>
+    </section>
+
+    <!-- Host an event -->
+    <section id="host" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Host an Event</h2>
+        <div class="underline"></div>
+      </div>
+      <form class="host card" onsubmit="return false">
+        <div class="row field">
+          <label>Event Type</label>
+          <select>
+            <option>Birthday</option><option>Corporate</option>
+            <option>Fundraiser</option><option>Other</option>
+          </select>
+        </div>
+        <div class="row field">
+          <label>Date</label>
+          <input type="date" />
+        </div>
+        <div class="row field">
+          <label>Guests</label>
+          <input type="number" min="1" value="20" />
+        </div>
+        <div class="row field">
+          <label>Notes</label>
+          <textarea rows="3" placeholder="Tell us about your event…"></textarea>
+        </div>
+        <div class="row actions">
+          <button class="btn" type="submit">Request Quote</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- back to top -->
+  <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>
